@@ -8,7 +8,7 @@ The goal of this project is to implement a professional-grade simulation tool to
 
 The underlying asset price $S_t$ is assumed to follow a Geometric Brownian Motion (GBM), discretized as follows :
 
-$$S_t = S_{t-1} exp^{(\mu -\frac{\sigma**2}{2}dt + \sigma \sqrt(dt) W)}$$
+$$S_t = S_{t-1} exp^{(\mu -\frac{\sigma^2}{2}dt + \sigma \sqrt{dt} W)}$$
 
 Where : 
 - $\mu$ : Expected annual return (drift). 
@@ -53,7 +53,7 @@ The tool reproduces 4 classic financial models provided in the course annexes :
 ## 4. Key Parameters (Annex Compliance)
 
 The solver is calibrated using the mandatory parameters from the project specifications:
-- CIR : $\kappa = 0.8, \theta = 0.10, \sigma = 0.5, \lamnbda = 0.05$. 
+- CIR : $\kappa = 0.8, \theta = 0.10, \sigma = 0.5, \lambda = 0.05$. 
 - Vasicek : $a = 0.95, b = 0.10, \sigma = 0.2, \lambda = 0.05$. 
 - Black-Scholes : $K = 100, \sigma = 0.20, r = 0.08$. 
 
