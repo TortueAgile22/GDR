@@ -1,0 +1,22 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environnements virtuels
+.env_gdr/
+env_gdr/
+
+
+# Distribution / Packaging
+dist/
+build/
+*.egg-info/
+
+# Fichiers de configuration IDE
+.vscode/
+.idea/
+
+# OS spécifiques
+.DS_Store
+Thumbs.db
