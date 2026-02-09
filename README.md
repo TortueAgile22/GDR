@@ -62,3 +62,62 @@ The solver is calibrated using the mandatory parameters from the project specifi
 - Language : Python 3.14.0
 - Architecture : Modular design with separate classes for models and solvers. 
 - Visualization : Price curves at $t=0$ compared to terminal payoffs at $T$. 
+
+
+# Getting Started : Running the Pricing Terminal
+
+To ensure the application runs smoothly, follow these steps to set up your environment and launch the dashboard. 
+
+## 1. Prerequisites 
+
+Ensure you have **Python 3.8** or higher installed on your machine. You can check this by running : 
+
+```{Bash}
+python --version
+```
+## 2. Creating a Virtual Environment
+
+It is highly recommended to use a virtual environment to avoid version conflicts between libraries. 
+
+- Windoww :
+```{Bash}
+python -m venv your_env
+.\your_env\Scripts\activate
+```
+
+- macOS / Linux :
+```{Bash}
+python3 -m venv your_env
+source your_env/bin/activate
+```
+
+## 3. Installing Dependencies
+
+Once the environment is activated, install the required packages (NumPy, SciPy, Matplotlib and Streamlit) :
+```{Bash}
+pip install -r requirements.txt
+```
+
+## 4. Project Structure 
+
+```{Plaintext}
+/your-project-folder
+├── app.py           # The UI (Streamlit)
+├── models.py        # Financial models (GBM, CIR, Vasicek, BS, Merton)
+├── instruments.py   # Options payoffs
+├── solvers.py       # Monte Carlo & Thomas Algorithm
+```
+
+## 5. Launching the Application
+
+To start the professional web interface, run the following command in your terminal :
+
+```{Bash}
+streamlit run app.py
+```
+
+A new tab will automatically open in your web browser (``localhost``)
+
+## 6. Stopping the App
+
+To stop the server, you can press ``Ctrl + C`` directly in the terminal where the app.py has been launched. 
