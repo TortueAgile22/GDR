@@ -87,3 +87,18 @@ class BlackScholesPDEModel(PDEModel):
         # cProc(t,x) = r
         c = r * np.ones_like(x)
         return a, b, c, 0
+
+
+class MertonModel(PDEModel):
+    def get_coeffs(self, x):
+        # Les coefficients sont identiques à Black-Scholes pour la valeur de la firme
+        r = self.params['r']
+        sigma = self.params['sigma']
+        
+        # aProc(t,x) = 0.5 * sigma^2 * x^2
+        a = 0.5 * (sigma**2) * (x**2)
+        # bProc(t,x) = r * x
+        b = r * x
+        # cProc(t,x) = r
+        c = r * np.ones_like(x)
+        return a, b, c, 0
